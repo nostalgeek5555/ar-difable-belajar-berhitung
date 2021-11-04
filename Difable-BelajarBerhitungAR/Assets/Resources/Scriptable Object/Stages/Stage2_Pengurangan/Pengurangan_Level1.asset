@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debd4772960013744afa70ded279d2bb, type: 3}
   m_Name: Pengurangan_Level1
   m_EditorClassIdentifier: 
-  levelType: 0
+  levelType: 1
   levelID: 0
   levelPrefab: {fileID: 1234224485687857304, guid: 0e4972f7889b80547b33ce922b5e1958,
     type: 3}
-  totalBothSidesObject: 
+  totalBothSidesObject: 0700000002000000
   levelAnswers: 040000000500000007000000
-  matchAnswer: 0
+  matchAnswer: 5

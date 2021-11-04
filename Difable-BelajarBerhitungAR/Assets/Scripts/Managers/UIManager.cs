@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI stageTitleTMP;
     public Transform answerPanel;
     public GameObject answerButtonPrefab;
+    public GameObject leftSideNumberBox;
+    public GameObject rightSideNumberBox;
     public TextMeshProUGUI leftSideNumber;
     public TextMeshProUGUI rightSideNumber;
 
@@ -66,24 +68,42 @@ public class UIManager : MonoBehaviour
         closePopupButton.onClick.RemoveAllListeners();
     }
 
+    public void SetLevelUI(LevelSO.LevelType levelType)
+    {
+        switch (levelType)
+        {
+            case LevelSO.LevelType.Menghitung:
+                leftSideNumberBox.SetActive(false);
+                rightSideNumberBox.SetActive(false);
+                Debug.Log("menghitung");
+                break;
+
+            case LevelSO.LevelType.Pengurangan:
+                leftSideNumberBox.SetActive(true);
+                rightSideNumberBox.SetActive(true);
+                leftSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[0].ToString();
+                rightSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[1].ToString();
+                Debug.Log($"current left side number :: {leftSideNumber.text}");
+                Debug.Log($"current right side number :: {rightSideNumber.text}");
+                break;
+
+            case LevelSO.LevelType.Penjumlahan:
+                leftSideNumberBox.SetActive(true);
+                rightSideNumberBox.SetActive(true);
+                leftSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[0].ToString();
+                rightSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[1].ToString();
+                Debug.Log($"current left side number :: {leftSideNumber.text}");
+                Debug.Log($"current right side number :: {rightSideNumber.text}");
+                break;
+
+            default:
+                break;
+        }
+    }
+
 
     public IEnumerator PopulateLevelUI(string levelID)
     {
-        if(GameManager.Instance.currentLevelSO.levelType == LevelSO.LevelType.Menghitung)
-        {
-            leftSideNumber.gameObject.SetActive(false);
-            rightSideNumber.gameObject.SetActive(false);
-        }
-
-        else
-        {
-            leftSideNumber.gameObject.SetActive(true);
-            rightSideNumber.gameObject.SetActive(true);
-            leftSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[0].ToString();
-            rightSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[1].ToString();
-        }
-
-
         if (answerPanel.childCount > 0)
         {
             for (int i = answerPanel.childCount - 1; i >= 0; i--)

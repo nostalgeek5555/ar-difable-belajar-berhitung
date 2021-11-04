@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debd4772960013744afa70ded279d2bb, type: 3}
   m_Name: Level1_Penjumlahan
   m_EditorClassIdentifier: 
-  levelType: 0
+  levelType: 2
   levelID: 0
   levelPrefab: {fileID: 1195920550817000552, guid: ce0bd8726215f89418ea8ae6febbddea,
     type: 3}

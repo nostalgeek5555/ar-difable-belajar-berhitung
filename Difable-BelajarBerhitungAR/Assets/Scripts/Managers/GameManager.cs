@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
             if (currentStageSO != null && currentLevelSO != null)
             {
                 Debug.Log($"Next scene name == {nextScene.name}");
+                UIManager.Instance.SetLevelUI(currentLevelSO.levelType);
                 SetupLevelData(currentLevelSO);
             }
         }

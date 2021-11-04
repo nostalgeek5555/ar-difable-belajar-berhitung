@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &63068015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -232,6 +232,8 @@ MonoBehaviour:
   answerPanel: {fileID: 1624644474}
   answerButtonPrefab: {fileID: 5827078935616964296, guid: 6aa1384309ce1db4aaae4b775f97ce55,
     type: 3}
+  leftSideNumberBox: {fileID: 63068014}
+  rightSideNumberBox: {fileID: 302988618}
   leftSideNumber: {fileID: 360976230}
   rightSideNumber: {fileID: 1710119735}
   scorePopupBG: {fileID: 581331895}
@@ -282,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &302988619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -371,7 +373,7 @@ RectTransform:
   - {fileID: 63068015}
   - {fileID: 302988619}
   m_Father: {fileID: 943489910}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1023,8 +1025,8 @@ RectTransform:
   m_Children:
   - {fileID: 442443259}
   - {fileID: 1930822283}
-  - {fileID: 1035347319}
   - {fileID: 316080948}
+  - {fileID: 1035347319}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1063,7 +1065,7 @@ RectTransform:
   - {fileID: 581331893}
   - {fileID: 225398835}
   m_Father: {fileID: 943489910}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
