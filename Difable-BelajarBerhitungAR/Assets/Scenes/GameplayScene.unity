@@ -241,6 +241,7 @@ MonoBehaviour:
   scoreTMP: {fileID: 6947605750515447708}
   closePopupButton: {fileID: 1185468723}
   homeButton: {fileID: 1862740105}
+  nextLevelButton: {fileID: 6947605750515447709}
 --- !u!4 &77620746
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,7 +1155,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.33343717, g: 0.5461143, b: 0.5566038, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1688,34 +1689,10 @@ MonoBehaviour:
   StatusFilter: 2
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3864882862983494651}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
-        m_MethodName: OnTrackableFound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3864882862983494651}
-        m_TargetAssemblyTypeName: ARManager, Assembly-CSharp
-        m_MethodName: OnTrackableLost
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1883515368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,5 +2140,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6947605750515447709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6815965486245314822, guid: 754439a61fcb4e249b645e6d82757dd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6947605750515447707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

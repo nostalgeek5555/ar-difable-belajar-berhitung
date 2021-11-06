@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Stage3_Penjumlahan
   m_EditorClassIdentifier: 
   stageName: penjumlahan
+  stageDisplayName: Penjumlahan
   stageLevels:
   - {fileID: 11400000, guid: 1169a7b338a1e824294f96b354a5e072, type: 2}

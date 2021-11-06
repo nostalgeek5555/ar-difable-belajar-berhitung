@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debd4772960013744afa70ded279d2bb, type: 3}
-  m_Name: Level1_Penjumlahan
+  m_Name: MenghitungBenda_Level3
   m_EditorClassIdentifier: 
-  levelType: 2
-  levelID: 0
-  levelPrefab: {fileID: 4882316574579111003, guid: ce0bd8726215f89418ea8ae6febbddea,
+  levelType: 0
+  levelID: 2
+  levelPrefab: {fileID: 4664527281268955398, guid: 4d882fd0af12043429825b6f6e535ba1,
     type: 3}
-  totalBothSidesObject: 0400000003000000
-  levelAnswers: 040000000500000007000000
-  matchAnswer: 7
+  totalBothSidesObject: 
+  levelAnswers: 060000000900000008000000
+  matchAnswer: 9

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Collections.Generic;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public StageSO currentStageSO;
     public LevelSO currentLevelSO;
+
+    public List<LevelSO> randomizedLevelList;
 
     [Header("Level Properties")]
     private int stageID;
@@ -53,16 +57,42 @@ public class GameManager : MonoBehaviour
 
     public void OnSceneChange(Scene currentScene, Scene nextScene)
     {
+        
         Debug.Log("on scene change");
         if (nextScene.buildIndex == 1)
         {
             if (currentStageSO != null && currentLevelSO != null)
             {
                 Debug.Log($"Next scene name == {nextScene.name}");
-                UIManager.Instance.SetLevelUI(currentLevelSO.levelType);
-                SetupLevelData(currentLevelSO);
+                randomizedLevelList = new List<LevelSO>(DataManager.Instance.levelDataTable.Values.ToList().Where(x => x.levelType == currentLevelSO.levelType));
+
+                SetupNextLevel();
+                
             }
         }
+
+        if (nextScene.buildIndex == 0)
+        {
+            randomizedLevelList.Clear();
+        }
+    }
+
+    public void SetupNextLevel()
+    {
+        LevelSO randomLevelSO = PickRandomLevel();
+        UIManager.Instance.SetLevelUI(randomLevelSO.levelType);
+        SetupLevelData(randomLevelSO);
+    }
+
+    public LevelSO PickRandomLevel()
+    {
+        int randomLevelPick = Random.Range(0, randomizedLevelList.Count - 1);
+
+        LevelSO pickedLevelSO = randomizedLevelList[randomLevelPick];
+        randomizedLevelList.Remove(pickedLevelSO);
+
+        Debug.Log($"random picked level :: {pickedLevelSO.levelID}");
+        return pickedLevelSO;
     }
 
     public void SetupLevelData(LevelSO levelSO)

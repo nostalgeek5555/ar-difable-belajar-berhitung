@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Stage1_MenghitungBenda
   m_EditorClassIdentifier: 
   stageName: menghitungbenda
+  stageDisplayName: Menghitung Benda
   stageLevels:
   - {fileID: 11400000, guid: b00b611af7b759b4d959d09e850a79ab, type: 2}
+  - {fileID: 11400000, guid: 8bac57b50bff26c4ea1b4139aae9470a, type: 2}
+  - {fileID: 11400000, guid: 1526063436811f04f94fc576cc4caca1, type: 2}
+  - {fileID: 11400000, guid: 12e539e2a5dcede4b9db4992ef0db9fa, type: 2}
+  - {fileID: 11400000, guid: 5464752a284863a4d8f2eb2ba036b581, type: 2}

@@ -11,7 +11,7 @@ public class HomePanel : MonoBehaviour
             {
                 GameManager.Instance.currentStageSO = DataManager.Instance.stageDataTable[stageName];
                 GameManager.Instance.currentLevelSO = DataManager.Instance.levelDataTable[stageName + "|0"];
-                SceneManager.LoadScene(1);
+                SceneManager.LoadSceneAsync(1);
             }
         }
     }

@@ -6,5 +6,6 @@ using NaughtyAttributes;
 public class StageSO : ScriptableObject
 {
     public string stageName;
+    public string stageDisplayName;
     [ReorderableList] public List<LevelSO> stageLevels;
 }

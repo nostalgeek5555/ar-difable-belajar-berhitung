@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Navigations UI")]
     public Button homeButton;
+    public Button nextLevelButton;
 
 
     void Awake()
@@ -60,16 +61,25 @@ public class UIManager : MonoBehaviour
         {
             ClosePopupScore();
         });
+
+        nextLevelButton.onClick.RemoveAllListeners();
+        nextLevelButton.onClick.AddListener(() =>
+        {
+            NextLevel();
+        });
     }
 
     private void OnDisable()
     {
         homeButton.onClick.RemoveAllListeners();
         closePopupButton.onClick.RemoveAllListeners();
+        nextLevelButton.onClick.RemoveAllListeners();
     }
 
     public void SetLevelUI(LevelSO.LevelType levelType)
     {
+        stageTitleTMP.text = GameManager.Instance.currentStageSO.stageDisplayName;
+
         switch (levelType)
         {
             case LevelSO.LevelType.Menghitung:
@@ -140,11 +150,21 @@ public class UIManager : MonoBehaviour
 
     public void ShowPopupScore()
     {
-        DataManager.Instance.playerScore = 0;
         DataManager.Instance.playerScore += DataManager.Instance.basePoint;
 
         scorePopupBG.gameObject.SetActive(true);
         scorePopup.SetActive(true);
+
+        if (GameManager.Instance.randomizedLevelList.Count > 0)
+        {
+            nextLevelButton.gameObject.SetActive(true);
+        }
+
+        else
+        {
+            nextLevelButton.gameObject.SetActive(false);
+        }
+
         scoreTMP.text = DataManager.Instance.playerScore.ToString();
 
         Sequence sequence = DOTween.Sequence();
@@ -155,6 +175,17 @@ public class UIManager : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void NextLevel()
+    {
+        if (GameManager.Instance.randomizedLevelList.Count > 0)
+        {
+            scorePopupBG.gameObject.SetActive(false);
+            scorePopup.SetActive(false);
+
+            GameManager.Instance.SetupNextLevel();
+        }
     }
 
 }

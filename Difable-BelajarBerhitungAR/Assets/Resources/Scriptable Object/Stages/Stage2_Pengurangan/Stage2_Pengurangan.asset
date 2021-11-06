@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Stage2_Pengurangan
   m_EditorClassIdentifier: 
   stageName: pengurangan
+  stageDisplayName: Pengurangan
   stageLevels:
   - {fileID: 11400000, guid: f631c1a9ac6b7d3448b64c871b2a3804, type: 2}
