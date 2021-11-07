@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
                 randomizedLevelList = new List<LevelSO>(DataManager.Instance.levelDataTable.Values.ToList().Where(x => x.levelType == currentLevelSO.levelType));
 
                 SetupNextLevel();
-                
             }
         }
 
@@ -80,7 +79,7 @@ public class GameManager : MonoBehaviour
     public void SetupNextLevel()
     {
         LevelSO randomLevelSO = PickRandomLevel();
-        UIManager.Instance.SetLevelUI(randomLevelSO.levelType);
+        UIManager.Instance.SetLevelUI(randomLevelSO);
         SetupLevelData(randomLevelSO);
     }
 
@@ -110,11 +109,16 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void CheckAnswer(int _answer)
+    public void CheckAnswer(AnswerButton answerButton)
     {
-        if (_answer == _matchAnswer)
+        if (answerButton.answer == _matchAnswer)
         {
-            UIManager.Instance.ShowPopupScore();
+            UIManager.Instance.ShowPopupScore(answerButton);
+        }
+
+        else
+        {
+            answerButton.match = false;
         }
     }
 

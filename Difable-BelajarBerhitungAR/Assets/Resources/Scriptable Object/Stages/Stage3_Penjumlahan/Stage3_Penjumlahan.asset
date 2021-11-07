@@ -16,3 +16,12 @@ MonoBehaviour:
   stageDisplayName: Penjumlahan
   stageLevels:
   - {fileID: 11400000, guid: 1169a7b338a1e824294f96b354a5e072, type: 2}
+  - {fileID: 11400000, guid: bdeeaa692a70d324f8a40ca8c4083cfb, type: 2}
+  - {fileID: 11400000, guid: 05536586ce2c99744adc44f3b72716dd, type: 2}
+  - {fileID: 11400000, guid: 97bf908effbe73d40ab52f27fdd25f4e, type: 2}
+  - {fileID: 11400000, guid: 81a5be725e1cacf4dbe13dfb2bfbe5d8, type: 2}
+  - {fileID: 11400000, guid: 2d88bae702f85c644be8e3e6a46cc1c1, type: 2}
+  - {fileID: 11400000, guid: ae0d331ff3971a34ea2155a57121a5bd, type: 2}
+  - {fileID: 11400000, guid: df567f84ed1d70345a363658e01ddb61, type: 2}
+  - {fileID: 11400000, guid: 17fa60e8da61fc34fb7c99e65ba79298, type: 2}
+  - {fileID: 11400000, guid: 14ba3c6fe66c03148af57b03981ab651, type: 2}

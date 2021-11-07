@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debd4772960013744afa70ded279d2bb, type: 3}
+  m_Name: Penjumlahan_Level10
+  m_EditorClassIdentifier: 
+  levelType: 2
+  levelID: 9
+  levelPrefab: {fileID: 3432744033293829631, guid: 57216b900b7e5ec45a3055d86f3ca38e,
+    type: 3}
+  totalBothSidesObject: 0600000003000000
+  levelAnswers: 0d0000000900000006000000
+  matchAnswer: 9

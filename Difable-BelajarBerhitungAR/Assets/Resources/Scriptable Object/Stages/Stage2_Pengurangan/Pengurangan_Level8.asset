@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: debd4772960013744afa70ded279d2bb, type: 3}
-  m_Name: Level1_Penjumlahan
+  m_Name: Pengurangan_Level8
   m_EditorClassIdentifier: 
-  levelType: 2
-  levelID: 0
-  levelPrefab: {fileID: 4882316574579111003, guid: ce0bd8726215f89418ea8ae6febbddea,
+  levelType: 1
+  levelID: 7
+  levelPrefab: {fileID: 7297668006336874574, guid: da25bdf55c7b07146ad0a5e66dbacb36,
     type: 3}
-  totalBothSidesObject: 0400000003000000
-  levelAnswers: 040000000500000007000000
-  matchAnswer: 7
+  totalBothSidesObject: 0700000007000000
+  levelAnswers: 040000000200000000000000
+  matchAnswer: 0

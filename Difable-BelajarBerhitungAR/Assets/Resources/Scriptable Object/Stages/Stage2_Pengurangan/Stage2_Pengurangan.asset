@@ -16,3 +16,12 @@ MonoBehaviour:
   stageDisplayName: Pengurangan
   stageLevels:
   - {fileID: 11400000, guid: f631c1a9ac6b7d3448b64c871b2a3804, type: 2}
+  - {fileID: 11400000, guid: 0b3aa70eb064f644a9e91dc531b4cc8a, type: 2}
+  - {fileID: 11400000, guid: 7f0a3a189a5ad0b49a01f45962bcd53f, type: 2}
+  - {fileID: 11400000, guid: 5ed4d1fa7d4968d40ba89eed22b07754, type: 2}
+  - {fileID: 11400000, guid: fa0d6eb7e6ee7e94384ef084d7b6fd6b, type: 2}
+  - {fileID: 11400000, guid: 63f4f41c8093862408c0c53af53b78d7, type: 2}
+  - {fileID: 11400000, guid: 039d95b68c2a20043bd855e89410d4f5, type: 2}
+  - {fileID: 11400000, guid: 0b5586e589e74224caf90cecefcbf02d, type: 2}
+  - {fileID: 11400000, guid: ac2c72c57871e5a4f86dbc21fb81d9d7, type: 2}
+  - {fileID: 11400000, guid: 0a16b0e9d58d0fb4aa798a3fcd77800f, type: 2}

@@ -76,11 +76,11 @@ public class UIManager : MonoBehaviour
         nextLevelButton.onClick.RemoveAllListeners();
     }
 
-    public void SetLevelUI(LevelSO.LevelType levelType)
+    public void SetLevelUI(LevelSO levelSO)
     {
         stageTitleTMP.text = GameManager.Instance.currentStageSO.stageDisplayName;
 
-        switch (levelType)
+        switch (levelSO.levelType)
         {
             case LevelSO.LevelType.Menghitung:
                 leftSideNumberBox.SetActive(false);
@@ -91,8 +91,8 @@ public class UIManager : MonoBehaviour
             case LevelSO.LevelType.Pengurangan:
                 leftSideNumberBox.SetActive(true);
                 rightSideNumberBox.SetActive(true);
-                leftSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[0].ToString();
-                rightSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[1].ToString();
+                leftSideNumber.text = levelSO.totalBothSidesObject[0].ToString();
+                rightSideNumber.text = levelSO.totalBothSidesObject[1].ToString();
                 Debug.Log($"current left side number :: {leftSideNumber.text}");
                 Debug.Log($"current right side number :: {rightSideNumber.text}");
                 break;
@@ -100,8 +100,8 @@ public class UIManager : MonoBehaviour
             case LevelSO.LevelType.Penjumlahan:
                 leftSideNumberBox.SetActive(true);
                 rightSideNumberBox.SetActive(true);
-                leftSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[0].ToString();
-                rightSideNumber.text = GameManager.Instance.currentLevelSO.totalBothSidesObject[1].ToString();
+                leftSideNumber.text = levelSO.totalBothSidesObject[0].ToString();
+                rightSideNumber.text = levelSO.totalBothSidesObject[1].ToString();
                 Debug.Log($"current left side number :: {leftSideNumber.text}");
                 Debug.Log($"current right side number :: {rightSideNumber.text}");
                 break;
@@ -148,9 +148,14 @@ public class UIManager : MonoBehaviour
     }
 
 
-    public void ShowPopupScore()
+    public void ShowPopupScore(AnswerButton answerButton)
     {
-        DataManager.Instance.playerScore += DataManager.Instance.basePoint;
+        if (!answerButton.match)
+        {
+            answerButton.match = true;
+            DataManager.Instance.playerScore += DataManager.Instance.basePoint;
+        }
+        
 
         scorePopupBG.gameObject.SetActive(true);
         scorePopup.SetActive(true);
@@ -174,6 +179,7 @@ public class UIManager : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        DataManager.Instance.playerScore = 0;
         SceneManager.LoadScene(0);
     }
 

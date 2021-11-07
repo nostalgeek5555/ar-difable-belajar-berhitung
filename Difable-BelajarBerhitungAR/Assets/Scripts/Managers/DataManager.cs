@@ -74,23 +74,6 @@ public class DataManager : MonoBehaviour
         stageDataName = stageDataTable.Keys.ToList();
         levelDataName = levelDataTable.Keys.ToList();
     }
+
 #endif
-
-
-    public class PlayerData
-    {
-        private int playerScore;
-        private int totalLevelUnlocked;
-
-        public int _playerScore { get => playerScore; set => playerScore = value; }
-        public int _totalLevelUnlocked { get => totalLevelUnlocked; set => totalLevelUnlocked = value; }
-
-
-        public PlayerData() { }
-        public PlayerData(int score, int levelUnlock)
-        {
-            playerScore = score;
-
-        }
-    }
 }

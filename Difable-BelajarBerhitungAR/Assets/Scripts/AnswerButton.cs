@@ -14,9 +14,11 @@ public class AnswerButton : MonoBehaviour
 
     [Header("Answer Properties")]
     public int answer;
+    public bool match = false;
 
     public void SetAnswerButton(int _answer)
     {
+        match = false;
         answer = _answer;
         answerText.text = answer.ToString();
     }
@@ -27,7 +29,7 @@ public class AnswerButton : MonoBehaviour
         answerButton.onClick.AddListener(() => { 
             if (answerButton.IsInteractable())
             {
-                GameManager.Instance.CheckAnswer(answer);
+                GameManager.Instance.CheckAnswer(this);
             }
         });
     }
