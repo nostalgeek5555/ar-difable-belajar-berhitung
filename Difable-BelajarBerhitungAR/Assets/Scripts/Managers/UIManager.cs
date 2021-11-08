@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
                 for (int j = 0; j < levelSO.levelAnswers.Count; j++)
                 {
                     answerButton = LeanPool.Spawn(answerButtonPrefab, answerPanel).GetComponent<AnswerButton>();
-                    answerButton.SetAnswerButton(levelSO.levelAnswers[j]);
+                    answerButton.SetAnswerButton(levelSO.levelAnswers[j], j);
                     Debug.Log($"current option number {j} :: {levelSO.levelAnswers[j]}");
                 }
             }
@@ -143,6 +143,11 @@ public class UIManager : MonoBehaviour
 
     public void ClosePopupScore()
     {
+        if (!AudioManager.Instance.sfxAudioSource.isPlaying)
+        {
+            AudioManager.Instance.PlaySFX("button01");
+        }
+
         scorePopupBG.gameObject.SetActive(false);
         scorePopup.SetActive(false);
     }
@@ -150,6 +155,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowPopupScore(AnswerButton answerButton)
     {
+        AudioManager.Instance.PlaySFX("win_popup");
+
         if (!answerButton.match)
         {
             answerButton.match = true;
@@ -179,12 +186,22 @@ public class UIManager : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        if (!AudioManager.Instance.sfxAudioSource.isPlaying)
+        {
+            AudioManager.Instance.PlaySFX("button01");
+        }
+
         DataManager.Instance.playerScore = 0;
         SceneManager.LoadScene(0);
     }
 
     public void NextLevel()
     {
+        if (!AudioManager.Instance.sfxAudioSource.isPlaying)
+        {
+            AudioManager.Instance.PlaySFX("button01");
+        }
+
         if (GameManager.Instance.randomizedLevelList.Count > 0)
         {
             scorePopupBG.gameObject.SetActive(false);

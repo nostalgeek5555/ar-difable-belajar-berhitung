@@ -136,7 +136,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   answerButton: {fileID: 5827078935616964298}
   answerText: {fileID: 5827078936417246568}
+  buttonImages:
+  - {fileID: 6323314082265057416, guid: 0924b218cfe47ce43bde3777126a4dc5, type: 3}
+  - {fileID: 3221695859007365196, guid: 36ca20ebeb6709b4aabd8c534518a4ca, type: 3}
+  - {fileID: 5899365766038852825, guid: e1e87b44ea15be44caf9af0bf27a70ab, type: 3}
   answer: 0
+  match: 0
 --- !u!1 &5827078936417246486
 GameObject:
   m_ObjectHideFlags: 0
